@@ -1,6 +1,10 @@
 <html>
     <head>
-        <title>home page</title>
+        {%if title%}
+        <title>{{title}}</title>
+        {%else%}
+        <title>Flask Blog</title>
+        {%endif%}
     </head>
     <body>
         {% for post in posts %}
