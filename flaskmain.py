@@ -10,9 +10,9 @@ def index():
 def home():
     return render_template("home.html")
 
-@app.route("/user")
-def user():
-    return "<h1>Profile page</h1>"
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 @app.errorhandler(404)
 def page_not_found(e):
