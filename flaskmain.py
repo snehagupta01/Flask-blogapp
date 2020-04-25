@@ -10,7 +10,7 @@ posts = [
         'date_posted' : 'Apri 25,2020'
     },
     {
-        'author ': 'sg2',
+        'author': 'sg2',
         'title' : 'tech1',
         'content' : 'abc2',
         'date_posted' : 'Apri 25,2020'
