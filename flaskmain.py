@@ -14,5 +14,9 @@ def home():
 def user():
     return "<h1>Profile page</h1>"
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return "<h2>Page not found</h2>",404
+
 if __name__=='__main__':
     app.run(debug=True)
