@@ -7,25 +7,10 @@ from flask_blog import app,db,bcrypt
 from flask_login import login_user, current_user, logout_user, login_required
 from PIL import Image
 
-posts = [
-    {
-        'author': 'sg1',
-        'title': 'bg1',
-        'content': 'First post content',
-        'date_posted': 'April 25, 2020'
-    },
-    {
-        'author': 'sg2',
-        'title': 'Bg2',
-        'content': 'Second post content',
-        'date_posted': 'April 25, 2020'
-    }
-]
-
-
 @app.route("/")
 @app.route("/home")
 def home():
+    posts=Post.query.all()
     return render_template('home.html', posts=posts)
 
 
